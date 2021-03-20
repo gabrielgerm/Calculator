@@ -1,3 +1,4 @@
+//variables
 const numbers = document.querySelectorAll('.number')
 const operators = document.querySelectorAll('.operator')
 const equals = document.querySelector('.equal')
@@ -10,6 +11,7 @@ var toCompute
 cont = 0
 cont2 = 0
 
+//functions
 function clear() {
     currentNumber.innerHTML = "";
     previousNumber.innerHTML = "";
@@ -44,9 +46,7 @@ function insert(number) {
     }
 }
 
-function operation(operator) {
-  
-   
+function operation(operator) {     
     if (currentNumber.innerText != '' && cont === 0) {
         operator = operator.target.innerText
         previousNumber.innerHTML = previousNumber.innerHTML + currentNumber.innerText + ' ' + operator + ' ';        
@@ -99,7 +99,7 @@ function equal(){
     cont2 = 0
 }
 
-
+//events
 clearAll.addEventListener("click", clear)
 deleteNumber.addEventListener("click", deleteNum)
 equals.addEventListener("click", equal)
